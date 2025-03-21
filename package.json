@@ -3,20 +3,24 @@
   "version": "1.0.0",
   "type": "module",
   "bin": {
-    "hono": "bin/hono.js"
+    "hono": "dist/bin/hono.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "npm run build && node ./dist/bin/hono.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mihir Modi",
   "license": "ISC",
-  "description": "",
+  "description": "Code generator for Hono.",
   "dependencies": {
-    "chalk": "^5.4.1",
-    "commander": "^13.1.0",
-    "figlet": "^1.8.0",
-    "inquirer": "^12.5.0",
-    "ora": "^8.2.0"
+    "fs-extra": "^11.3.0",
+    "inquirer": "^12.5.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^22.13.11",
+    "typescript": "^5.8.2"
   }
 }
